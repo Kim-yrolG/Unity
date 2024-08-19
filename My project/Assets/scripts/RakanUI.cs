@@ -15,26 +15,26 @@ public class RakanUI : MonoBehaviour
 
     private void Start()
     {
-        Rakan_image.sprite = rakan.image; //ÀÌ¹ÌÁöÀÇ .sprite¸¦ ÀÔ·ÂÇØ ºÒ·¯¿À´Â ÆÄÀÏ ÇüÅÂ¸¦ ÁöÁ¤ÇØÁà¾ßÇÑ´Ù.
+        Rakan_image.sprite = rakan.image; //ì´ë¯¸ì§€ .sprite
         Rakan_name.text = rakan.name;
-        Rakan_hp.value = rakan.hp; //½½¶óÀÌ´õÀÇ ÇöÀç°ª
+        Rakan_hp.value = rakan.hp; //ìŠ¬ë¼ì´ë”ì˜ í˜„ì¬ê°’
         Rakan_mp.value = rakan.mp;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O)) // iÅ°¸¦ ´©¸£¸é
+        if (Input.GetKeyDown(KeyCode.O)) // oí‚¤ë¥¼ ëˆ„ë¥´ë©´
         {
-            if (Rakan_UI.activeSelf) //ÇÃ·¹ÀÌ¾î ui°¡ ÄÑÁ®ÀÖ´Ù¸é
-                Rakan_UI.SetActive(false); //²¨ÁÖ¼¼¿ä
+            if (Rakan_UI.activeSelf) //í”Œë ˆì´ì–´ uiê°€ ì¼œì ¸ìˆë‹¤ë©´
+                Rakan_UI.SetActive(false); //êº¼ì£¼ì„¸ìš”
             else
-                Rakan_UI.SetActive(true); //ÄÑÁÖ¼¼¿ä
+                Rakan_UI.SetActive(true); //ì¼œì£¼ì„¸ìš”
         }
     }
     public void Ult()
     {
         rakan.ult();
-        setValue(); //ÃÖ½ÅÈ­
+        setValue(); //ìµœì‹ í™”
     }
     public void setValue()
     {
